@@ -1,0 +1,97 @@
+@import url('https://fonts.cdnfonts.com/css/monument-extended');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Monument Extended', sans-serif;
+}
+html , body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main img{
+    width: 500px;
+    height: 75vh;
+    position: relative;
+    z-index: 99;
+    object-fit: cover;
+}
+
+.scroll-div{
+    position: absolute;
+    width: 100%;
+    
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.scroll-div::-webkit-scrollbar{
+    display: none;
+}
+.scroll-div h1{
+    display: inline-block;
+    font-size: 160px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-right: 20px;
+    letter-spacing: 2px;
+
+}
+#scroll-div1{
+    top: 20%;
+}
+
+#scroll-div1 h1{
+  
+    animation: anim 2s linear  infinite  ;
+    animation-direction: reverse;
+}
+#scroll-div2{
+    top: 40%;
+    -webkit-text-stroke: 1.5px #000;
+    color: transparent;
+    z-index: 100;
+}
+
+#scroll-div2 h1{
+    animation: anim 4s linear  infinite  ;
+    animation-direction: reverse;
+
+}
+#scroll-div3{
+    top: 60%;
+}
+
+#scroll-div3 h1{
+    animation: anim 2s linear  infinite  ;
+}
+@keyframes anim {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+#text{
+    position: absolute;
+    top: 15%;
+    z-index: 999;
+    width: 40%;
+}
+#txt{
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
